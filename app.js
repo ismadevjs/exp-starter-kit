@@ -25,10 +25,6 @@ app.use(function (req, res, next) {
   next();
 });
 app.use(function (req, res, next) {
-  res.locals.admin = req.session.admin;
-  next();
-});
-app.use(function (req, res, next) {
   res.locals.toasts = req.toastr.render();
   next();
 });
